@@ -8,11 +8,15 @@
     <script src="app.js" defer></script>
 </head>
 <body>
+    <div class="modal hidden">
+        <h1>HIGH FIVE!</h1>
+        <button class="close">Close</button>
+    </div>
     <form novalidate>
         <p>
           <label for="mail">
             <span>Please enter an email address:</span>
-                <input type="email" id="mail" name="mail" minlength="8" required />
+                <input type="email" id="mail" name="mail" placeholder="" minlength="8" required />
             <span class="error"></span>
           </label>
         </p>
@@ -31,21 +35,21 @@
           <p>
             <label for="zip">
                 <span>Enter Zip/Postal Code</span>
-                    <input type="text" id="zip" required/>
+                    <input type="text" id="zip" placeholder="" required/>
                 <span class="error"></span>
             </label>
           </p>
           <p>
             <label for="password">
                 <span>Enter Password</span>
-                    <input type="password" id="password"/>
+                    <input type="password" id="password" placeholder="" minlength="8" required/>
                 <span class="error"></span>
             </label>
           </p>
           <p>
             <label for="password2">
                 <span>Retype Password</span>
-                    <input type="password" id="password2"/>
+                    <input type="password" id="password2" placeholder="" minlength="8" required/>
                 <span class="error"></span>
             </label>
           </p>

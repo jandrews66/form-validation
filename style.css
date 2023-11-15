@@ -2,14 +2,20 @@ body {
     font: 1em sans-serif;
     width: 200px;
     padding: 0;
-    margin: 0 auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
   }
   
   p * {
     display: block;
   }
   
-  input[type="email"] {
+  input {
     appearance: none;
   
     width: 100%;
@@ -31,6 +37,14 @@ body {
   input:focus:invalid {
     outline: none;
   }
+
+  /* Use placeholder to remove invalid styling from empty fields */
+  input:placeholder-shown{
+    border: 1px solid #333;
+    background-color: rgb(252, 252, 252);
+
+  }
+
   
   /* This is the style of our error messages */
   .error {
@@ -44,8 +58,44 @@ body {
   
     box-sizing: border-box;
   }
-  
-  .error.active {
-    padding: 0.3em;
+
+  form {
+    margin-top: 12vh;
   }
-  
+
+  form > button {
+    width: 100%;
+  }
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 350px;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+  }
+  .hidden {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+    width: 150px;
+  }
